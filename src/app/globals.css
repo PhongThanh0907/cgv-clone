@@ -26,3 +26,8 @@ body {
     text-wrap: balance;
   }
 }
+
+.slick-dots .slick-active div {
+  background-color: palevioletred;
+  border: 1px solid red;
+}
