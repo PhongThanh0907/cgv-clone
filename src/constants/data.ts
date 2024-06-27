@@ -99,3 +99,30 @@ export const ListStd = [
         link: "/"
     },
 ]
+
+export const listFilmData = [
+    {
+        title: "Củu Long Thành Trại",
+        img: "/film 01.jpg"
+    },
+    {
+        title: "Những mảnh ghép cảm xúc",
+        img: "/film 02.jpg"
+    },
+    {
+        title: "Gia tài của ngoại",
+        img: "/film 03.jpg"
+    },
+    {
+        title: "Doremon",
+        img: "/film 04.jpg"
+    },
+    {
+        title: "Trư bát giới",
+        img: "/film 05.jpg"
+    },
+    {
+        title: "Chuyện ma giảng đường",
+        img: "/film 06.jpg"
+    },
+]

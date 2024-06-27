@@ -5,6 +5,8 @@ import ToggleLanguage from "./_components/ToggleLanguage";
 import Header from "./_components/Header";
 import Std from "./_components/Std";
 import Banner from "./_components/Banner";
+import TitleSection from "@/components/TitleSection";
+import ListFilm from "./_components/ListFilm";
 
 export default function Home() {
   return (
@@ -36,6 +38,21 @@ export default function Home() {
         <Std />
 
         <Banner />
+
+        <div className="default-screen">
+          <div>
+            <TitleSection className="my-7">
+              <Image
+                src="/movie_selection.gif"
+                alt="icon"
+                width={425}
+                height={60}
+              />
+            </TitleSection>
+
+            <ListFilm />
+          </div>
+        </div>
       </div>
     </main>
   );

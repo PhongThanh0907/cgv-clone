@@ -31,3 +31,19 @@ body {
   background-color: palevioletred;
   border: 1px solid red;
 }
+
+.animate-move {
+  animation: move-right-then-back 2s ease-in-out infinite;
+}
+
+@keyframes move-right-then-back {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(10px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
