@@ -126,3 +126,21 @@ export const listFilmData = [
         img: "/film 06.jpg"
     },
 ]
+
+export const listEventData = [
+    {
+        img: "/event01.png"
+    },
+    {
+        img: "/event02.jpg"
+    },
+    {
+        img: "/event03.jpg"
+    },
+    {
+        img: "/event04.png"
+    },
+    {
+        img: "/event05.png"
+    },
+]

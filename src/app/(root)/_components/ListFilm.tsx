@@ -21,6 +21,7 @@ const ListFilm = () => {
   const settings = {
     dots: false,
     infinite: true,
+    autoplay: true,
     speed: 1000,
     slidesToShow: 4,
     slidesToScroll: 1,
