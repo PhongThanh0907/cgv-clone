@@ -144,3 +144,77 @@ export const listEventData = [
         img: "/event05.png"
     },
 ]
+
+export const dataFooter = [
+    {
+        title: "CGV Việt Nam",
+        children: [
+            {
+                title: "Giới Thiệu",
+            },
+            {
+                title: "Tiện Ích Online",
+            },
+            {
+                title: "Thẻ Quà Tặng",
+            },
+            {
+                title: "Tuyển Dụng",
+            },
+            {
+                title: "Liên Hệ Quảng Cáo CGV",
+            },
+        ]
+    },
+    {
+        title: "Điều khoản sử dụng",
+        children: [
+            {
+                title: "Điều Khoản Chung",
+            },
+            {
+                title: "Điều Khoản Giao Dịch",
+            },
+            {
+                title: "Chính Sách Thanh Toán",
+            },
+            {
+                title: "Chính Sách Bảo Mật",
+            },
+            {
+                title: "Câu Hỏi Thường Gặp",
+            },
+        ]
+    },
+    {
+        title: "Kết nối với chúng tôi",
+        children: [
+            {
+                title: "Điều Khoản Chung",
+            },
+            {
+                title: "Điều Khoản Giao Dịch",
+            },
+            {
+                title: "Chính Sách Thanh Toán",
+            },
+            {
+                title: "Chính Sách Bảo Mật",
+            },
+        ]
+    },
+    {
+        title: "Chăm sóc khách hàng",
+        children: [
+            {
+                title: "Hotline: 1900 6017",
+            },
+            {
+                title: "Giờ làm việc: 8:00 - 22:00 (Tất cả các ngày bao gồm cả Lễ Tết)",
+            },
+            {
+                title: "Email hỗ trợ: hoidap@cgv.vn",
+            },
+        ]
+    },
+]

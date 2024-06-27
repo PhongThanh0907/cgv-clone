@@ -8,6 +8,7 @@ import Banner from "./_components/Banner";
 import TitleSection from "@/components/TitleSection";
 import ListFilm from "./_components/ListFilm";
 import Event from "./_components/Event";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -116,6 +117,19 @@ export default function Home() {
             <div className="w-full h-1 bg-black mt-2 rounded" />
           </div>
         </div>
+
+        <div className="mt-8 border-t-[3px] border-b-[3px] border-black flex-center h-[44px]">
+          <div className="default-screen flex-center relative top-1">
+            <Image
+              src="/brand-type-film-footer_ver2.png"
+              alt="brand-type"
+              width={980}
+              height={28}
+            />
+          </div>
+        </div>
+
+        <Footer />
       </div>
     </main>
   );
