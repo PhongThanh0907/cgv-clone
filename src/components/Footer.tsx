@@ -48,7 +48,7 @@ const Footer = () => {
         </div>
       </div>
       <div
-        className="h-[200px] w-full bg-cover bg-center bg-no-repeat relative"
+        className="h-28 w-full relative"
         style={{
           backgroundImage: "url(/bg-bottom-footer.jpg)",
         }}
