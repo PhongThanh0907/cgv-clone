@@ -5,7 +5,7 @@ import React from "react";
 const Header = () => {
   return (
     <header
-      className="w-full mx-auto mt-1"
+      className="w-full mx-auto mt-1 hidden lg:block"
       style={{
         backgroundImage: "url(/bg-top.png)",
         backgroundSize: "10px 135px",

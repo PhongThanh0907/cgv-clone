@@ -9,6 +9,7 @@ import TitleSection from "@/components/TitleSection";
 import ListFilm from "./_components/ListFilm";
 import Event from "./_components/Event";
 import Footer from "@/components/Footer";
+import MenuMobile from "./_components/MenuMobile";
 
 export default function Home() {
   return (
@@ -20,7 +21,7 @@ export default function Home() {
           width={980}
           height={80}
         />
-        <div className="w-full flex justify-end items-center gap-3">
+        <div className="w-full justify-end items-center gap-3 hidden lg:flex">
           <ul className="flex gap-6 items-center relative top-[1px]">
             {MenuHeader.map((item, index) => (
               <li className="flex items-center gap-1 hover-70" key={index}>
@@ -31,6 +32,18 @@ export default function Home() {
           </ul>
 
           <ToggleLanguage />
+        </div>
+
+        <div className="lg:hidden w-full flex flex-col justify-center items-center">
+          <Image
+            className="py-3"
+            src="/logoCGV.png"
+            alt="logo"
+            width={68}
+            height={30}
+          />
+
+          <MenuMobile />
         </div>
       </div>
 

@@ -8,7 +8,7 @@ const Std = () => {
         backgroundImage: "url(/bg-header-transparent-home.png)",
         backgroundRepeat: "no-repeat",
       }}
-      className="default-screen h-[108px] border-b border-[#222]"
+      className="default-screen h-[108px] border-b border-[#222] hidden lg:block"
     >
       <ul className="flex border-b border-[#222] h-[102px]">
         {ListStd.map((item, index) => (
