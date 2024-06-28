@@ -26,18 +26,35 @@ const Event = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-[280px] mx-auto lg:w-full">
       <Slider className="relative z-[1]" ref={sliderRef} {...settings}>
         {listEventData.map((item, index) => (
           <div
-            className="w-[240px] flex justify-center items-center mx-auto relative cursor-pointer"
+            className="lg:w-[240px] w-[280px] flex justify-center items-center mx-auto relative cursor-pointer"
             key={index}
           >
             <Image
-              className="h-[201px] object-cover mx-auto rounded cursor-pointer"
+              className="h-[201px] object-cover mx-auto rounded cursor-pointer hidden w-full"
               src={item.img}
               alt="img-film"
               height={201}

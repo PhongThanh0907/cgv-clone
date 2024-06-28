@@ -26,10 +26,37 @@ const ListFilm = () => {
     slidesToShow: 4,
     slidesToScroll: 1,
     arrows: false,
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
+
+  const settingMobile = {
+    dots: false,
+    infinite: true,
+    autoplay: true,
+    speed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
   };
 
   return (
-    <div className="relative w-full">
+    <div className="relative w-[240px] mx-auto lg:w-full">
       <Slider className="relative z-[1]" ref={sliderRef} {...settings}>
         {listFilmData.map((item, index) => (
           <div
@@ -72,17 +99,17 @@ const ListFilm = () => {
             <div className="absolute group-hover:h-[82px] h-0 overflow-hidden duration-300 bg-black/80 inset-x-[2px] bottom-0 rounded-b">
               <div className="flex-center flex-col h-full">
                 <div className="text-white text-center">
-                  <h4 className="text-md font-bold uppercase truncate">
+                  <h4 className="text-sm lg:text-md font-bold uppercase truncate">
                     {item.title}
                   </h4>
 
                   <div className="flex gap-4 pt-2 justify-center px-1.5">
-                    <Button className="text-sm uppercase px-1.5 py-2">
+                    <Button className="text-xs lg:text-sm uppercase px-1.5 py-2">
                       Xem chi tiết
                     </Button>
 
                     <Button className="px-1">
-                      <div className="flex text-sm uppercase border py-1 px-1.5 border-gray-200/50 rounded">
+                      <div className="flex text-xs lg:text-sm uppercase border py-1 px-1.5 border-gray-200/50 rounded">
                         <Image
                           className="relative"
                           src="/bg-cate-booking.png"
