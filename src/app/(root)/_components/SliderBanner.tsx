@@ -52,7 +52,7 @@ const SliderBanner = () => {
       <Slider ref={sliderRef} {...settings}>
         {dataImg.map((image, index) => (
           <Image
-            className="border border-white lg:h-[447px] h-[177px]"
+            className="border border-white lg:h-[447px] h-[177px] w-auto"
             key={index}
             src={image}
             height={447}

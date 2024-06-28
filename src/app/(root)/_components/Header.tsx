@@ -49,7 +49,13 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-2">
-          <Image src="/channelCGV.gif" alt="channel" width={139} height={29} />
+          <Image
+            className="w-auto h-[29px]"
+            src="/channelCGV.gif"
+            alt="channel"
+            width={139}
+            height={29}
+          />
           <Image
             className="relative -top-4"
             src="/mua-ve_ngay.png"

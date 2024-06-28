@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
+import HeaderLayout from "@/components/HeaderLayout";
 
 const roboto = Roboto_Slab({ subsets: ["vietnamese"] });
 
@@ -16,7 +17,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={roboto.className}>
+        <HeaderLayout />
+        {children}
+      </body>
     </html>
   );
 }
