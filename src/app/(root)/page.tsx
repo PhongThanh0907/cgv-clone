@@ -1,15 +1,10 @@
 import Image from "next/image";
 
-import { MenuHeader } from "@/constants/data";
-import ToggleLanguage from "./_components/ToggleLanguage";
-import Header from "./_components/Header";
 import Std from "./_components/Std";
 import Banner from "./_components/Banner";
 import TitleSection from "@/components/TitleSection";
 import ListFilm from "./_components/ListFilm";
 import Event from "./_components/Event";
-import Footer from "@/components/Footer";
-import MenuMobile from "./_components/MenuMobile";
 
 export default function Home() {
   return (
@@ -131,8 +126,6 @@ export default function Home() {
             />
           </div>
         </div>
-
-        <Footer />
       </div>
     </main>
   );

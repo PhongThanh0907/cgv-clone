@@ -2,9 +2,7 @@ import { dataFooter } from "@/constants/data";
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-const Footer = () => {
+const FooterLayout = () => {
   return (
     <div>
       <div className="default-screen flex-between py-5 hidden lg:flex">
@@ -57,4 +55,4 @@ const Footer = () => {
   );
 };
 
-export default Footer;
+export default FooterLayout;
