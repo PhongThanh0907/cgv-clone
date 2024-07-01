@@ -1,5 +1,6 @@
 import { MenuNavHeader } from "@/constants/data";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const Header = () => {
@@ -13,13 +14,15 @@ const Header = () => {
     >
       <div className="default-screen flex-between h-[134px]">
         <div className="flex gap-5">
-          <Image
-            className="hover-70"
-            src="/logoCGV.png"
-            alt="logo-cgv"
-            width={136}
-            height={59}
-          />
+          <Link href="/">
+            <Image
+              className="hover-70"
+              src="/logoCGV.png"
+              alt="logo-cgv"
+              width={136}
+              height={59}
+            />
+          </Link>
 
           <ul className="flex gap-8 items-center relative top-[18px]">
             {MenuNavHeader.map((item, index) => (
@@ -31,7 +34,7 @@ const Header = () => {
                   style={{
                     backgroundImage: "url(/bg_menu_hover.png)",
                   }}
-                  className={`hidden group-hover:block absolute left-0 w-48 duration-300 py-2.5`}
+                  className={`hidden group-hover:block absolute left-0 w-48 duration-300 py-2.5 z-10`}
                 >
                   {item.children.map((child, index) => (
                     <li

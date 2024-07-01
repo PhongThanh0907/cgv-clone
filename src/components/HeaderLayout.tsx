@@ -6,9 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-const HeaderLayout = (props: Props) => {
+const HeaderLayout = () => {
   return (
     <>
       <div className="flex-center default-screen flex-col">
@@ -19,6 +17,7 @@ const HeaderLayout = (props: Props) => {
           width={980}
           height={80}
         />
+
         <div className="w-full justify-end items-center gap-3 hidden lg:flex">
           <ul className="flex gap-6 items-center relative top-[1px]">
             {MenuHeader.map((item, index) => (
