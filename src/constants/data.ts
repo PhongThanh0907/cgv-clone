@@ -1,15 +1,18 @@
 export const MenuHeader = [
     {
         title: "TIN MỚI & ƯU ĐÃI",
-        img: "/icons/icon_tag.png"
+        img: "/icons/icon_tag.png",
+        link: "/"
     },
     {
         title: "VÉ CỦA TÔI",
-        img: "/icons/icon_ticket.png"
+        img: "/icons/icon_ticket.png",
+        link: "/"
     },
     {
         title: "ĐĂNG NHẬP / ĐĂNG KÝ",
-        img: "/icons/logo_user.png"
+        img: "/icons/logo_user.png",
+        link: "/account"
     },
 ]
 

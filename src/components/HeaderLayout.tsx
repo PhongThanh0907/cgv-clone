@@ -3,6 +3,7 @@ import MenuMobile from "@/app/(root)/_components/MenuMobile";
 import ToggleLanguage from "@/app/(root)/_components/ToggleLanguage";
 import { MenuHeader } from "@/constants/data";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type Props = {};
@@ -22,8 +23,13 @@ const HeaderLayout = (props: Props) => {
           <ul className="flex gap-6 items-center relative top-[1px]">
             {MenuHeader.map((item, index) => (
               <li className="flex items-center gap-1 hover-70" key={index}>
-                <Image src={item.img} alt="icon" width={25} height={25} />
-                <span className="text-[#666]"> {item.title}</span>
+                <Link
+                  className="flex items-center gap-1 hover-70"
+                  href={item.link}
+                >
+                  <Image src={item.img} alt="icon" width={25} height={25} />
+                  <span className="text-[#666]"> {item.title}</span>
+                </Link>
               </li>
             ))}
           </ul>

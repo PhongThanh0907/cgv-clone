@@ -5,10 +5,21 @@ import React from "react";
 const FooterLayout = () => {
   return (
     <div>
-      <div className="default-screen flex-between py-5 hidden lg:flex">
+      <div className="mt-8 border-t-[2px] border-b-[2px] border-gray-500 flex-center h-[44px]">
+        <div className="default-screen flex-center relative top-1">
+          <Image
+            src="/brand-type-film-footer_ver2.png"
+            alt="brand-type"
+            width={980}
+            height={28}
+          />
+        </div>
+      </div>
+
+      <div className="default-screen  justify-between py-5 hidden lg:flex">
         {dataFooter.map((item, index) => (
           <div className="w-[240px]" key={index}>
-            <h3>{item.title}</h3>
+            <h3 className="font-bold text-gray-800 pb-2">{item.title}</h3>
             <ul>
               {item.children.map((child, index) => (
                 <li key={index}>{child.title}</li>
@@ -18,7 +29,7 @@ const FooterLayout = () => {
         ))}
       </div>
 
-      <div className="w-full h-[3px] bg-black rounded hidden lg:flex" />
+      <div className="w-full h-[2px] bg-gray-500 rounded hidden lg:flex" />
 
       <div className="default-screen flex lg:flex-row flex-col items-center gap-6 py-3">
         <div className="w-[120px] h-full flex-center">
