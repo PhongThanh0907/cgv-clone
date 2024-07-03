@@ -9,7 +9,7 @@ import {
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useFormState } from "react-dom";
 import { useForm } from "react-hook-form";
 import { signInAction, signUpAction } from "../actions";
@@ -44,8 +44,9 @@ const AccountPage = () => {
 
   const { mutate: handleSignIn, isPending: isLoadingSignIn } = useMutation({
     mutationFn: signInAction,
-    onSuccess: () => {
+    onSuccess: (data) => {
       setIsRegister(false);
+      localStorage.setItem("accessToken", data.data.accessToken);
       router.push("/");
     },
     onError: () => {
@@ -62,6 +63,10 @@ const AccountPage = () => {
       return;
     }
   };
+
+  useEffect(() => {
+    if (localStorage.getItem("accessToken")) redirect("/");
+  }, []);
 
   return (
     <div className="default-screen flex pt-8 pb-14">
