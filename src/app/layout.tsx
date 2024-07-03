@@ -3,6 +3,7 @@ import { Roboto_Slab } from "next/font/google";
 import "./globals.css";
 import HeaderLayout from "@/components/HeaderLayout";
 import FooterLayout from "@/components/FooterLayout";
+import ReactQueryProvider from "@/components/ReactQueryProvider";
 
 const roboto = Roboto_Slab({ subsets: ["vietnamese"] });
 
@@ -19,9 +20,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={roboto.className}>
-        <HeaderLayout />
-        {children}
-        <FooterLayout />
+        <ReactQueryProvider>
+          <HeaderLayout />
+          {children}
+          <FooterLayout />
+        </ReactQueryProvider>
       </body>
     </html>
   );

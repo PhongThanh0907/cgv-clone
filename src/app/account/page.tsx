@@ -7,24 +7,60 @@ import {
   registerSchema,
 } from "@/schemas/authSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useMutation } from "@tanstack/react-query";
 import Image from "next/image";
 import React, { useState } from "react";
+import { useFormState } from "react-dom";
 import { useForm } from "react-hook-form";
+import { signInAction, signUpAction } from "../actions";
+import toast, { Toaster } from "react-hot-toast";
+import { redirect, useRouter } from "next/navigation";
 
 const AccountPage = () => {
   const [isRegister, setIsRegister] = useState<boolean>(false);
+  const router = useRouter();
+  useFormState;
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<AuthFormInputs>({
     resolver: zodResolver(isRegister ? registerSchema : loginSchema),
   });
 
+  const { mutate: handleSignUp, isPending: isLoadingSignUp } = useMutation({
+    mutationFn: signUpAction,
+    onSuccess: () => {
+      reset();
+      toast.success(`Đăng ký thành công`);
+      setIsRegister(false);
+    },
+    onError: () => {
+      toast.error(`Đăng ký thất bại`);
+    },
+  });
+
+  const { mutate: handleSignIn, isPending: isLoadingSignIn } = useMutation({
+    mutationFn: signInAction,
+    onSuccess: () => {
+      setIsRegister(false);
+      router.push("/");
+    },
+    onError: () => {
+      toast.error(`Đăng nhập thất bại`);
+    },
+  });
+
   const onSubmit = (data: AuthFormInputs) => {
-    console.log(data);
-    // Xử lý đăng nhập ở đây
+    if (isRegister) {
+      handleSignUp(data);
+      return;
+    } else {
+      handleSignIn(data);
+      return;
+    }
   };
 
   return (
@@ -151,7 +187,11 @@ const AccountPage = () => {
               </div>
             )}
 
-            <Button type="submit" className="mt-2">
+            <Button
+              isLoading={isLoadingSignIn || isLoadingSignUp}
+              type="submit"
+              className="mt-2"
+            >
               {isRegister ? "Đăng ký" : "Đăng nhập"}
             </Button>
 
@@ -171,6 +211,7 @@ const AccountPage = () => {
           height={528}
         />
       </div>
+      <Toaster />
     </div>
   );
 };
