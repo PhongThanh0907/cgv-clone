@@ -10,16 +10,14 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useMutation } from "@tanstack/react-query";
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import { useFormState } from "react-dom";
 import { useForm } from "react-hook-form";
-import { signInAction, signUpAction } from "../actions";
+import { signInAction, signUpAction } from "./actions";
 import toast, { Toaster } from "react-hot-toast";
 import { redirect, useRouter } from "next/navigation";
 
 const AccountPage = () => {
   const [isRegister, setIsRegister] = useState<boolean>(false);
   const router = useRouter();
-  useFormState;
 
   const {
     register,

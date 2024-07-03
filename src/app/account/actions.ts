@@ -2,6 +2,12 @@
 
 import { AuthFormInputs } from "@/schemas/authSchema";
 
+export interface SignInResponse {
+  data: {
+    accessToken: string;
+  };
+}
+
 export const signUpAction = async (formData: AuthFormInputs) => {
   const response = await fetch(`http://localhost:3001/auth/register`, {
     method: "POST",
@@ -14,7 +20,9 @@ export const signUpAction = async (formData: AuthFormInputs) => {
   return result;
 };
 
-export const signInAction = async (formData: AuthFormInputs) => {
+export const signInAction = async (
+  formData: AuthFormInputs
+): Promise<SignInResponse> => {
   const response = await fetch(`http://localhost:3001/auth/login`, {
     method: "POST",
     headers: {
