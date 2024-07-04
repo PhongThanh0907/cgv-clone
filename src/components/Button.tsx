@@ -29,9 +29,12 @@ const Button: React.FC<ButtonProps> = ({
         className
       )}
     >
-      <div className="flex-center">
-        <MoonLoader size={20} color="#fff" loading={isLoading} />
-      </div>
+      {isLoading && (
+        <div className="flex-center">
+          <MoonLoader size={20} color="#fff" loading={isLoading} />
+        </div>
+      )}
+
       {children}
     </button>
   );

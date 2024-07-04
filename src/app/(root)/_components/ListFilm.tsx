@@ -104,18 +104,18 @@ const ListFilm = () => {
                   </h4>
 
                   <div className="flex gap-4 pt-2 justify-center px-1.5">
-                    <Button className="text-xs lg:text-sm uppercase px-1.5 py-2">
+                    <Button className="text-xs uppercase px-1 py-1 w-[102px]">
                       Xem chi tiết
                     </Button>
 
-                    <Button className="px-1">
-                      <div className="flex text-xs lg:text-sm uppercase border py-1 px-1.5 border-gray-200/50 rounded">
+                    <Button className="px-1 py-1 w-[102px]">
+                      <div className="flex text-xs uppercase border px-2.5 py-1 border-gray-200/50 rounded">
                         <Image
                           className="relative"
                           src="/bg-cate-booking.png"
                           alt="ticket"
-                          height={24}
-                          width={20}
+                          height={20}
+                          width={16}
                         />
                         <span className="pl-1">Mua vé</span>
                       </div>
