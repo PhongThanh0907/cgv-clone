@@ -13,7 +13,7 @@ const HeaderNav = () => {
   const { userInfo, setAccessToken, setUserInfo } = useStore();
 
   useEffect(() => {
-    if (!userInfo) {
+    if (localStorage.getItem("accessToken") && !userInfo) {
       setAccessToken(localStorage.getItem("accessToken") || "");
       setUserInfo(jwtDecode(localStorage.getItem("accessToken") || ""));
     }
