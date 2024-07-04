@@ -105,8 +105,13 @@ export const ListStd = [
 
 export const listFilmData = [
     {
+        title: "KẺ TRỘM MẶT TRĂNG 4",
+        img: "/film 07.jpg",
+    },
+    {
         title: "Củu Long Thành Trại",
         img: "/film 01.jpg"
+
     },
     {
         title: "Những mảnh ghép cảm xúc",
