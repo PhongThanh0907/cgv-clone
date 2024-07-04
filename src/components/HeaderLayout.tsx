@@ -9,7 +9,6 @@ const HeaderLayout = () => {
     <>
       <div className="flex-center default-screen flex-col">
         <Image
-          className="h-auto w-auto"
           src="/bannerHeader.jpg"
           alt="CGV-banner"
           width={980}

@@ -4,6 +4,7 @@ import "./globals.css";
 import HeaderLayout from "@/components/HeaderLayout";
 import FooterLayout from "@/components/FooterLayout";
 import ReactQueryProvider from "@/components/ReactQueryProvider";
+import Image from "next/image";
 
 const roboto = Roboto_Slab({ subsets: ["vietnamese"] });
 
@@ -23,6 +24,14 @@ export default function RootLayout({
         <ReactQueryProvider>
           <HeaderLayout />
           {children}
+          <div className="fixed bottom-4 right-4 z-10">
+            <Image
+              src="/minion-homepage.gif"
+              alt="minion-icon"
+              height={100}
+              width={100}
+            />
+          </div>
           <FooterLayout />
         </ReactQueryProvider>
       </body>
