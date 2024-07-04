@@ -1,14 +1,8 @@
+import { IconType } from "@/app/types/iconType";
 import { cn } from "@/libs/utils";
 import React from "react";
 
-interface ArrowProps {
-  onClick?: () => void;
-  height?: number;
-  width?: number;
-  fill?: string;
-  className?: string;
-}
-const Arrow: React.FC<ArrowProps> = ({
+const Arrow: React.FC<IconType> = ({
   onClick,
   height,
   width,

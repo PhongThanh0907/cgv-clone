@@ -1,15 +1,8 @@
+import { IconType } from "@/app/types/iconType";
 import { cn } from "@/libs/utils";
 import React from "react";
 
-interface BarsProps {
-  onClick?: () => void;
-  height?: number;
-  width?: number;
-  fill?: string;
-  className?: string;
-}
-
-const Bars: React.FC<BarsProps> = ({
+const Bars: React.FC<IconType> = ({
   onClick,
   height,
   width,

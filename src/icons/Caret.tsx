@@ -1,15 +1,8 @@
+import { IconType } from "@/app/types/iconType";
 import { cn } from "@/libs/utils";
 import React from "react";
 
-interface CaretProps {
-  height?: number;
-  width?: number;
-  fill?: string;
-  onClick?: () => void;
-  className?: string;
-}
-
-const Caret: React.FC<CaretProps> = ({
+const Caret: React.FC<IconType> = ({
   height,
   width,
   fill,

@@ -1,15 +1,8 @@
+import { IconType } from "@/app/types/iconType";
 import { cn } from "@/libs/utils";
 import React from "react";
 
-interface UserProps {
-  onClick?: () => void;
-  height?: number;
-  width?: number;
-  fill?: string;
-  className?: string;
-}
-
-const User: React.FC<UserProps> = ({
+const User: React.FC<IconType> = ({
   onClick,
   height,
   width,
