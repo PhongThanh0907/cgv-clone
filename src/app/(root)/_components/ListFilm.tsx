@@ -133,6 +133,7 @@ const ListFilm = () => {
           top: "50%",
           transform: "translateY(-50%)",
         }}
+        aria-label="previous"
         className="absolute -left-[33px] opacity-70 hover:opacity-100 duration-300 h-16 w-9 bg-red-600 rounded-l-full "
         onClick={previous}
       >
@@ -143,6 +144,7 @@ const ListFilm = () => {
           top: "50%",
           transform: "translateY(-50%)",
         }}
+        aria-label="next"
         className="absolute -right-[33px] opacity-70 hover:opacity-100 duration-300 h-16 w-9 bg-red-600 rounded-r-full "
         onClick={next}
       >

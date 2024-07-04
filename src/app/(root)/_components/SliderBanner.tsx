@@ -67,6 +67,7 @@ const SliderBanner = () => {
           top: "50%",
           transform: "translateY(-50%)",
         }}
+        aria-label="previous"
         className="absolute left-4 opacity-50 hover:opacity-100 duration-300"
         onClick={previous}
       >
@@ -77,6 +78,7 @@ const SliderBanner = () => {
           top: "50%",
           transform: "translateY(-50%)",
         }}
+        aria-label="next"
         className="absolute right-4 opacity-50 hover:opacity-100 duration-300"
         onClick={next}
       >
